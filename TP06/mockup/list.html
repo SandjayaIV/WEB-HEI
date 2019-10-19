@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaCinEE</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+	<!-- Navigation menu -->
+    <nav class="navbar navbar-inverse navbar-static-top">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html">JavaCinEE</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="list.html">Films list</a></li>
+				<li><a href="newfilm.html">Add a new film</a></li>
+			</ul>
+		</div> 
+	</nav>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<h3>Films</h3>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Title</th>
+							<th>Genre</th>
+							<th>Release date</th>
+							<th>Director</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Blade Runner 2049</td>
+							<td>Science fiction</td>
+							<td>4 october 2017</td>
+							<td>Denis Villeneuve</td>
+							<td><a href="film.html?id=1" title="Details for Blade Runner 2049"><span class="glyphicon glyphicon-search"></span></a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>It</td>
+							<td>Horror</td>
+							<td>20 september 2017</td>
+							<td>Andy Muschietti	</td>
+							<td><a href="film.html?id=2" title="Details for It"><span class="glyphicon glyphicon-search"></span></a></td>
+						</tr>	
+						<tr>
+							<td>3</td>
+							<td>Le Sens de la fête</td>
+							<td>Comedy</td>
+							<td>4 october 2017</td>
+							<td>Olivier Nakache</td>
+							<td><a href="film.html?id=3" title="Details for Le Sens de la fête"><span class="glyphicon glyphicon-search"></span></a></td>
+						</tr>	
+						<tr>
+							<td>4</td>
+							<td>Mother !</td>
+							<td>Drama</td>
+							<td>13 september 2017</td>
+							<td>Darren Aronofsky</td>
+							<td><a href="film.html?id=4" title="Details for Mother !"><span class="glyphicon glyphicon-search"></span></a></td>
+						</tr>	
+						<tr>
+							<td>5</td>
+							<td>Good Time</td>
+							<td>Drama</td>
+							<td>13 september 2017</td>
+							<td>Ben and Joshua Safdie</td>
+							<td><a href="film.html?id=5" title="Details for Good Time"><span class="glyphicon glyphicon-search"></span></a></td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-4">
+				<h4>A random film:</h4>
+				<div class="well">
+					<h4>Blade Runner 2049 <small>(Denis Villeneuve)</small></h4>
+					<p>Released on 4 october 2017</p>
+					<p>
+						<span class="glyphicon glyphicon-search"></span>
+						<a href="film.html" title="Details for Blade Runner 2049">See this film details</a>
+					</p>
+				</div>
+			</div>
+    	</div>
+	</div>
+  </body>
+</html>
