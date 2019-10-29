@@ -1,7 +1,23 @@
 body{
-
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-image: linear-gradient(lightgray, #aaa);
 }
+/*header */
 header{
     background-color:#333366;
     color:white;
+    /*color : white */
+    padding-left: 4em;
+}
+h1{
+    margin: 0;
+    line-height: 2em; /* 2 fois la hauteur du texte contenu */
+}   
+
+/* jeux */
+article{
+    background-color: white;
+    width: 80%;
+    margin: 1em auto;
 }
