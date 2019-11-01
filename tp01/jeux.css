@@ -2,6 +2,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-image: linear-gradient(lightgray, #aaa);
+    padding-top:2em;
+}
+
+a{
+    color:#dd9933;
+}
+a:hover{
+    color:#3300dd
 }
 /*header */
 header{
@@ -9,10 +17,15 @@ header{
     color:white;
     /*color : white */
     padding-left: 4em;
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    border-bottom: lightgray solid 0.3  rem;
 }
 h1{
     margin: 0;
-    line-height: 2em; /* 2 fois la hauteur du texte contenu */
+    line-height: 3rem; /* 2 fois la hauteur du texte contenu */
 }   
 
 /* jeux */
@@ -20,4 +33,184 @@ article{
     background-color: white;
     width: 80%;
     margin: 1em auto;
+}
+#celeste h2{
+    background-image: url("ressources/title.png");
+    background-position: center;
+}
+
+h2{
+    background-color: #663333;
+    background-position: center;
+
+    color: white;
+    text-align: right;
+    padding-right: 5em;
+    line-height: 5em;
+    letter-spacing: 0.5em;
+}
+h3{
+    text-decoration: underline;
+    padding-left: 3em;
+}
+p{
+    background-color: #f0f0f0;
+    margin: 1em 10%;
+    padding:0.8em;
+    border-style: solid;
+    border-color: #333366;
+    border-width: 0 0.5em 0 1em;
+}
+/* TABLEAU */
+table{
+    width: 80%;
+    margin:auto;
+    border-collapse: collapse;
+}
+table th{
+    background-color: #202050;
+    color: white;
+
+}
+
+table tr:nth-child(2n) th{
+    background-color:#333366;
+}
+table tr:nth-child(2n+1) th{
+    background-color: #202050;
+
+}
+
+table td, table th{
+    padding:0.7em;
+    text-align: left;
+}
+
+table tr:nth-child(2n+1) td{
+    background-color: #f0f0f0;
+}
+
+table caption{
+    caption-side: bottom;
+    text-align: left;
+    font-style: italic;
+    padding-left: 3em;
+}
+
+/* IMAGES */
+figure{
+    display: inline-block;
+    width: 40%;
+    margin:3%;
+    box-shadow: 0 0 5px #333366 ;
+
+}
+
+figure img{
+    width:94%; /* largeur : 90% de celle de l'élément parent soit figure */
+    margin:3%;
+
+}
+
+figure figcaption{
+    text-align: center;
+    font-size: 0.6em;
+    border-top:1px #aaaaaa solid;
+    padding:1em;
+}
+
+/*AVIS */   
+section.avis{
+    position: relative;
+}
+section.points{
+    display: inline-block;
+    width: 40%;
+    margin:3%;  
+    vertical-align: top; 
+
+}
+section.points h4{
+    background-color:#f0f0f0;
+    margin:0;
+    padding: 1em 2em;
+    border-bottom: #202050 dashed 1px;
+
+}
+section.points ul{
+    background-color: #202050;
+    color: white;
+    margin:0;
+    padding: 2em 1em;
+    list-style-type: none;    
+}
+section.points ul li{
+    margin: 0.5em 0 0.5em 0;
+}
+/* NOTE */
+div.note{
+    background-color: #663333;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top:0;
+    left:-3em;
+    border-radius: 5px;
+    box-shadow:0 0 5px #202050;
+    transform: rotate(-20deg);
+    padding: 0 0.5em;
+   
+}
+div.note h4{
+    margin: 0.3em;
+}
+div.note p{
+    border: none;
+    background-color: transparent;  
+    text-align: center;
+    font-size:1.5em;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* FORMULAIRE */
+#commentaire ul{
+    list-style-type: none;
+}
+
+#commentaire ul li{
+    margin: 0.5em;
+}
+
+input, select, textarea {
+    background-color: #f0f0f0;
+    border: #333366 solid 1px;
+    border-radius: 3px; 
+}
+
+label{
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    vertical-align: top;
+}
+textarea{
+    width: 50%;
+    height: 5em;
+}
+
+#commentaire p{
+    border: none;
+}
+
+input[type=submit],input[type=reset]{
+    background-color: #333366;
+    padding: 1em 1.5em;
+    border:0;
+    border-radius: 0;
+    color:white;
+}
+input[type=submit]:hover,input[type=reset]:hover{
+    background-color: #663333;
 }

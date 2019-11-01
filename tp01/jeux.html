@@ -13,7 +13,7 @@
         <h1>Ma page sur des jeux que j'aime bien</h1>
     </header>
     <main>
-        <article>
+        <article id="celeste">
             <h2>Celeste</h2>
             <h3>Résumé</h3>
             <p>Celeste est un jeu de plateforme où l'on guide une jeune femme appelée Madeline pendant l'escalade de la
@@ -59,22 +59,64 @@
                 <img src="ressources/telepherique.png" alt="Image du jeu">
                 <figcaption>Une pause moyennement reposante</figcaption>
             </figure>
-            <h3>Mon Avis</h3>
-            <h4>Les points positifs</h4>
-            <ul>
-                <li>Un challenge à la difficulté relevée mais maitrisée</li>
-                <li>Chaque niveau a sa particularité</li>
-                <li>Une histoire prenante</li>
-                <li>Une ambiance sonore et visuelle au top</li>
-            </ul>
-            <h4>Les points negatifs</h4>
-            <ul>
-                <li>Une maniabilité parfois compliquée sur le pad de la switch</li>
-            </ul>
-            <h4>Ma note</h4>
-            <p>9/10</p>
+            <section class="avis">
+                <h3>Mon Avis</h3>
+                <section class="points">
+                    <h4>Les points positifs</h4>
+                    <ul>
+                        <li>Un challenge à la difficulté relevée mais maitrisée</li>
+                        <li>Chaque niveau a sa particularité</li>
+                        <li>Une histoire prenante</li>
+                        <li>Une ambiance sonore et visuelle au top</li>
+                    </ul>
+                </section>
+                <section class="points">
+                    <h4>Les points negatifs</h4>
+                    <ul>
+                        <li>Une maniabilité parfois compliquée sur le pad de la switch</li>
+                    </ul>
+                </section>
+                <div class="note">
+                    <h4>Ma note</h4>
+                    <p>9/10</p>
+                </div>
+            </section> <!-- section article pour positionnement-->
         </article>
     </main>
+    <article id="commentaire">
+        <h2> Commentaire </h2>
+        <form method="post" action="jeux.html">
+            <ul>
+                <li>
+                    <label for="id_nom">Nom</label>
+                    <input type="text" name="Nom" id="id_nom">
+                </li>
+                <li>
+                    <label for="id_psw">Mot de Passe</label>
+                    <input type="password" name="psw" id="id_psw">
+                </li>
+                <li>
+                    <label for="">Type de commentaire</label>
+                    <select name="type" id="id_type">
+                        <option value="Avis">Avis</option>
+                        <option value="question">Question</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="id_commentaire">Commentaire</label>
+                    <textarea type="text" name="commentaire" id="id_commentaire"></textarea>
+                </li>
+                <li>
+                    <label for="id_date">Date</label>
+                    <input type="date" name="date" id="id_date">
+
+                </li>
+            </ul>
+            <p><input type="reset" value="Annuler">
+            <input type="submit" value="Envoyer"></p>
+        </form>
+    </article>
+
 </body>
 
 </html>
