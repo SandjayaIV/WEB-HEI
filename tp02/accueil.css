@@ -1,0 +1,164 @@
+@font-face{
+    font-family: "SpaceText-Bold";
+    src: url("ressources/fonts/SpaceText-Bold.woff2") format("woff2"),
+    url("ressources/fonts/SpaceText-Bold.otf") format("otf");
+}
+@font-face{
+    font-family: "SpaceText-Regular";
+    src: url("ressources/fonts/SpaceText-Regular.woff2") format("woff2"),
+    url("ressources/fonts/SpaceText-Regular.otf") format("otf");
+
+}
+
+/* FONT */
+h1,h2,h3{
+    font-family: "SpaceText-Bold";
+}
+p{
+    font-family: "SpaceText-Regular";
+}
+/*FONT */
+
+header{
+    background-color:darkblue;
+    color: white;
+    position: relative;
+    padding: 1em;
+}
+
+header h1{
+    margin: 0;
+    line-height: 2em; 
+}
+
+/* RECHERCHE */
+header form{
+    background-color: orangered;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    right: 2em;
+    color: black;
+    padding: 1em;
+}
+header form h2{
+    margin: 0;
+}
+
+header form input{
+    border: none;  /* ca enlève la bordure moche de l'input */ 
+}
+header form label{
+    display: block;
+    text-indent: -999999px;
+}
+header form input[type=submit]{
+    background-color: darkblue;
+    color: white;
+}
+header form input[type=submit]:hover{
+    background-color: orange;
+}
+
+/*Liste de podcast */
+
+main h2{
+    background-color: orangered;
+    margin:0;
+    text-align: center;
+    font-family: "SpaceText-Regular";
+    color: darkblue;
+
+}
+
+#podcasts-liste{
+    display:flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+#podcasts-liste li{
+    width:45%;
+    margin:2%;
+    background-color: darkblue;
+    color:white;
+    position: relative;
+    height:10rem;
+    display:flex;
+    flex-direction: column;
+}
+#podcasts-liste li:nth-child(4n+2),
+#podcasts-liste li:nth-child(4n+3)
+{
+    background-color: lightblue;
+    color:darkblue
+
+}
+#podcasts-liste li img{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: 0.5rem;
+    height: 10rem;
+}
+#podcasts-liste li:nth-child(2n) img{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: inherit; /* le left du bloc dessus ne s'applique plus */
+    right: 0.5rem;
+    height: 10rem;
+
+}
+#podcasts-liste li h3{
+    border-bottom: solid 2px lightblue;
+    padding-bottom: 0.5rem ;
+    margin-bottom: 0.5rem;
+}
+#podcasts-liste li:nth-child(4n+2) h3,
+#podcasts-liste li:nth-child(4n+3) h3{
+    border-bottom: solid 2px darkblue;
+}  
+
+}
+#podcasts-liste p{
+    margin:0.5rem;
+}
+
+
+#podcasts-liste h3,#podcasts-liste p{
+    margin-left:11rem;
+
+}
+
+#podcasts-liste li:nth-child(2n) h3,#podcasts-liste li:nth-child(2n) p{
+    margin-right:11rem;
+    margin-left: inherit;
+    text-align: right;
+
+}
+
+#podcasts-liste li:nth-child(2n) a:hover{
+    padding-right:1em;
+    transition: 0.5s;
+}
+#podcasts-liste li a:hover{
+    padding-left: 1em;
+    transition: 0.5s;
+}
+
+#podcasts-liste li a::before{
+    content:">";
+}
+#podcasts-liste li:nth-child() a:after{
+    content: "<";
+}
+
+
+
+
+
+
+
+
+

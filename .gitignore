@@ -1,2 +1,7 @@
 .idea/*
 /tp01/ressources/*
+*.pdf
+*.jpg
+*.png
+*.zip
+*.ini
