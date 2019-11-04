@@ -9,8 +9,5 @@
         <module name="java-cinee" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="java-cinee" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>
