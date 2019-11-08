@@ -1,0 +1,18 @@
+#contacts-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#contacts-container .card {
+	margin: 1em 0;
+	width: 49%;
+}
+
+form {
+	margin: 1em 0;
+}
+
+#contacts-container .preferred {
+	background-color : #ffaaaa;
+}

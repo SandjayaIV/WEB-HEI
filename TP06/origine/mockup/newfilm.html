@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaCinEE</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+	<!-- Navigation menu -->
+    <nav class="navbar navbar-inverse navbar-static-top">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html">JavaCinEE</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="list.html">Films list</a></li>
+				<li class="active"><a href="newfilm.html">Add a new film</a></li>
+			</ul>
+		</div> 
+	</nav>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<h3>Add a new film</h3>
+				<form method="post" class="form-horizontal">
+					<div class="form-group">
+						<label for="title" class="col-sm-2 control-label">Title</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="title" id="title">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="releaseDate" class="col-sm-2 control-label">Release date</label>
+						<div class="col-sm-3">
+							<input type="date" class="form-control" name="releaseDate" id="releaseDate">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="genre" class="col-sm-2 control-label">Genre</label>
+						<div class="col-sm-10">
+							<select class="form-control" name="genre" id="genre">
+								<option>Drama</option>
+								<option>Adventure </option>
+								<option>Action</option>
+								<option>Comedy</option>
+								<option>Thriller</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="duration" class="col-sm-2 control-label">Duration</label>
+						<div class="col-sm-3">
+							<div class="input-group">
+							  <input type="number" class="form-control" name="duration" id="duration">
+							  <span class="input-group-addon">min</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="director" class="col-sm-2 control-label">Director</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="director" id="director">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="summary" class="col-sm-2 control-label">Summary</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="5" name="summary" id="summary"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input class="btn btn-primary" type="submit" value="Enregistrer">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-4">
+				<h4>A random film:</h4>
+				<div class="well">
+					<h4>Blade Runner 2049 <small>(Denis Villeneuve)</small></h4>
+					<p>Released on 4 october 2017</p>
+					<p>
+						<span class="glyphicon glyphicon-search"></span>
+						<a href="film.html" title="Details for Blade Runner 2049">See this film details</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

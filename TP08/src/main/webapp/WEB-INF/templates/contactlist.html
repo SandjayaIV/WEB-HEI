@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My contacts</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/solid.min.css">
+	<link rel="stylesheet" href="../css/regular.min.css">
+	<link rel="stylesheet" href="../css/fontawesome.min.css">
+	<link rel="stylesheet" href="../css/contacts.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<header>
+			<h1 class="display-1">My contacts</h1>
+		</header>
+		<main>
+			<section id="contacts-container">
+				<article class="card preferred">
+					<header class="card-header">
+					  <h2>
+						Aurélie Dupont
+						<a href="unprefer?id=1" class="btn btn-danger btn-sm" title="Mark as not preferred">
+							<i class="fas fa-star"></i>
+						</a>
+					  </h2>
+					</header>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">
+							<span class="badge badge-secondary"><i class="fas fa-phone-alt"></i></span>
+							01.23.45.67.89
+						</li>
+						<li class="list-group-item">
+							<span class="badge badge-secondary"><i class="fas fa-at"></i></span>
+							<a href="mailto:aurelie.dupont@gmail.com">aurelie.dupont@gmail.com</a>
+						</li>
+					</ul>
+				</article>
+				<article class="card">
+					<header class="card-header">
+					  <h2>
+						Julie Dupont
+						<a href="prefer?id=2" class="btn btn-outline-secondary btn-sm" title="Mark as preferred">
+							<i class="far fa-star"></i>
+						</a>
+					  </h2>
+					</header>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">
+							<span class="badge badge-secondary"><i class="fas fa-phone-alt"></i></span>
+							01.23.45.67.89
+						</li>
+						<li class="list-group-item">
+							<span class="badge badge-secondary"><i class="fas fa-at"></i></span>
+							<a href="mailto:aurelie.dupont@gmail.com">julie.dupont@gmail.com</a>
+						</li>
+					</ul>
+				</article>
+				<article class="card">
+					<header class="card-header">
+					  <h2>
+						Jean Martin
+						<a href="prefer?id=3" class="btn btn-outline-secondary btn-sm" title="Mark as preferred">
+							<i class="far fa-star"></i>
+						</a>
+					  </h2>
+					</header>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">
+							<span class="badge badge-secondary"><i class="fas fa-phone-alt"></i></span>
+							01.23.45.67.89
+						</li>
+						<li class="list-group-item">
+							<span class="badge badge-secondary"><i class="fas fa-at"></i></span>
+							<a href="mailto:jean.martin@gmail.com">jean.martin@gmail.com</a>
+						</li>
+					</ul>
+				</article>
+				<article class="card preferred">
+					<header class="card-header">
+					  <h2>
+						Audrey Paquette
+						<a href="unprefer?id=5" class="btn btn-danger btn-sm" title="Mark as not preferred">
+							<i class="fas fa-star"></i>
+						</a>
+					  </h2>
+					</header>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">
+							<span class="badge badge-secondary"><i class="fas fa-phone-alt"></i></span>
+							01.23.45.67.89
+						</li>
+						<li class="list-group-item">
+							<span class="badge badge-secondary"><i class="fas fa-at"></i></span>
+							<a href="mailto:jean.martin@gmail.com">audrey.paquette.2@orange.fr</a>
+						</li>
+					</ul>
+				</article>
+				<article class="card">
+					<header class="card-header">
+					  <h2>
+						Bernard Tisserand
+						<a href="prefer?id=4" class="btn btn-outline-secondary btn-sm" title="Mark as preferred">
+							<i class="far fa-star"></i>
+						</a>
+					  </h2>
+					</header>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">
+							<span class="badge badge-secondary"><i class="fas fa-phone-alt"></i></span>
+							01.23.45.67.89
+						</li>
+						<li class="list-group-item">
+							<span class="badge badge-secondary"><i class="fas fa-at"></i></span>
+							<a href="mailto:jean.martin@gmail.com">bernard@tisserand.fr</a>
+						</li>
+					</ul>
+				</article>
+			</section>
+			
+			<form method="post" action="addcontact" class="card">
+				<section class="card-body">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="firstname">First name</label>
+							<input type="text" name="firstname" id="firstname" class="form-control" />
+						</div>
+						<div class="form-group col-md-6">
+							<label for="lastname">Last name</label>
+							<input type="text" name="lastname" id="lastname" class="form-control" />
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="phone">Phone number</label>
+							<input type="text" name="phone" id="phone" class="form-control" />
+						</div>
+						<div class="form-group col-md-6">
+							<label for="email">E-mail address</label>
+							<input type="text" name="email" id="email" class="form-control" />
+						</div>
+					</div>
+					
+					<button type="submit" class="btn btn-primary btn-sm">
+						<i class="fas fa-plus"></i>
+						Add contact
+					</button>
+				</section>
+			</form>
+		</main>
+	</div>
+</body>
+</html>
