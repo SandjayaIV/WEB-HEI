@@ -30,6 +30,7 @@
 					</tbody>
 				</table>
 				<h3>Add a new genre</h3>
+				<div  class="alert alert-danger" role="alert" th:if="${error}" th:text="${error}"></div>
 				<form method="post" class="form-horizontal">
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Name</label>

@@ -16,9 +16,13 @@ import java.util.List;
 public class GenresListServlet extends GenericServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String errorMessage = (String) req.getSession().getAttribute("errorMessage");
+        req.getSession().removeAttribute("errorMessage");
+
         WebContext context = new WebContext(req, resp, req.getServletContext());
         List<Genre> genres = FilmService.getInstance().listGenres();
         context.setVariable("genresList", genres);
+        context.setVariable("error", errorMessage);
 
         TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
         templateEngine.process("genres", context, resp.getWriter());
@@ -27,7 +31,11 @@ public class GenresListServlet extends GenericServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");
-        FilmService.getInstance().addGenre(name);
+        try {
+            FilmService.getInstance().addGenre(name);
+        } catch (IllegalArgumentException e) {
+            req.getSession().setAttribute("errorMessage", e.getMessage());
+        }
         resp.sendRedirect("genres");
     }
 }

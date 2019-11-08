@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 
 @WebServlet("/newfilm")
@@ -20,9 +21,13 @@ public class AddFilmServlet extends GenericServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String errorMessage = (String) req.getSession().getAttribute("errorMessage");
+        req.getSession().removeAttribute("errorMessage");
+
         WebContext context = new WebContext(req, resp, req.getServletContext());
         List<Genre> genres = FilmService.getInstance().listGenres();
         context.setVariable("genresList", genres);
+        context.setVariable("error", errorMessage);
 
         TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
         templateEngine.process("newfilm", context, resp.getWriter());
@@ -34,18 +39,36 @@ public class AddFilmServlet extends GenericServlet {
         String title = req.getParameter("title");
         String director = req.getParameter("director");
         String summary = req.getParameter("summary");
-        Integer duration = Integer.parseInt(req.getParameter("duration"));
-        Genre genre = FilmService.getInstance().getGenre(Integer.parseInt(req.getParameter("genre")));
+        Integer duration = null;
+        try {
+            duration = Integer.parseInt(req.getParameter("duration"));
+        } catch (NumberFormatException ignored) {
+        }
+
+        Genre genre = null;
+        try {
+            genre = FilmService.getInstance().getGenre(Integer.parseInt(req.getParameter("genre")));
+        } catch (NumberFormatException ignored) {
+        }
 
         String releaseDateAsString = req.getParameter("releaseDate");
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate releaseDate = LocalDate.parse(releaseDateAsString, dateFormat);
+        LocalDate releaseDate = null;
+        try {
+            releaseDate = LocalDate.parse(releaseDateAsString, dateFormat);
+        } catch (DateTimeParseException ignored) {
+        }
 
         // CREATE FILM
-        Film newFilm = new Film(null, title, releaseDate, genre, duration, director, summary);
-        Film createdFilm = FilmService.getInstance().addFilm(newFilm);
+        try {
+            Film newFilm = new Film(null, title, releaseDate, genre, duration, director, summary);
+            Film createdFilm = FilmService.getInstance().addFilm(newFilm);
 
-        // REDIRECT TO DETAIL FILM
-        resp.sendRedirect(String.format("film?id=%d", createdFilm.getId()));
+            // REDIRECT TO DETAIL FILM
+            resp.sendRedirect(String.format("film?id=%d", createdFilm.getId()));
+        } catch (IllegalArgumentException e) {
+            req.getSession().setAttribute("errorMessage", e.getMessage());
+            resp.sendRedirect("newfilm");
+        }
     }
 }

@@ -1,0 +1,9 @@
+#battle-status .alert span {
+    display: block;
+    text-align: center;
+}
+
+#battle-status  .big-number {
+    font-size: 2em;
+    font-weight: bold;
+}

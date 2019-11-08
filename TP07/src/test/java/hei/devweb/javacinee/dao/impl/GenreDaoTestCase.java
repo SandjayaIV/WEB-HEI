@@ -1,24 +1,21 @@
 package hei.devweb.javacinee.dao.impl;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.tuple;
+import hei.devweb.javacinee.dao.GenreDao;
+import hei.devweb.javacinee.entities.Genre;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import hei.devweb.javacinee.dao.GenreDao;
-import hei.devweb.javacinee.dao.mock.impl.GenreDaoMockImpl;
-import hei.devweb.javacinee.entities.Genre;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.tuple;
 
 public class GenreDaoTestCase {
 
-	private GenreDao genreDao = new GenreDaoMockImpl();
+	private GenreDao genreDao = new GenreDaoImpl();
 
 	@Before
 	public void initDb() throws Exception {
