@@ -24,5 +24,6 @@ window.onload = function () { // Faire en sorte que le html soit complétement c
         initCharacter("Richar Aladana","Boxer");
     }
 
+
  };
  
