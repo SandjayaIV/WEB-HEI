@@ -1,0 +1,20 @@
+#battle-status .alert span {
+    display: block;
+    text-align: center;
+}
+
+#battle-status  .big-number {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.btn-like {
+    color: #fff;
+    background-color: #e83e8c;
+    border-color: #e83e8c;
+}
+
+.btn-like:hover {
+    background-color: #d82e7c;
+    border-color: #d82e7c;
+}

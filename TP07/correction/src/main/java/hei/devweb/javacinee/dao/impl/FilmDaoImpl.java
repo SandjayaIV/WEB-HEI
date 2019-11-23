@@ -17,7 +17,7 @@ public class FilmDaoImpl implements FilmDao {
     @Override
     public List<Film> listFilms() {
         String sqlQuery = "SELECT * FROM film " +
-                " JOIN genre ON film.genre_id = genre.genre_id" +
+                " JOIN gewnre ON film.genre_id = genre.genre_id" +
                 " ORDER BY title";
         List<Film> films = new ArrayList<>();
         try(Connection connection = DataSourceProvider.getDataSource().getConnection()) {
@@ -98,7 +98,7 @@ public class FilmDaoImpl implements FilmDao {
         try(Connection connection = DataSourceProvider.getDataSource().getConnection()) {
             try (PreparedStatement statement = connection.prepareStatement(sqlQuery, Statement.RETURN_GENERATED_KEYS)) {
                 statement.setString(1, film.getTitle());
-                statement.setDate(2, Date.valueOf(film.getReleaseDate()));
+                statement.setDate(2, Date.valueOf(film. getReleaseDate()));
                 statement.setInt(3, film.getGenre().getId());
                 statement.setInt(4, film.getDuration());
                 statement.setString(5, film.getDirector());

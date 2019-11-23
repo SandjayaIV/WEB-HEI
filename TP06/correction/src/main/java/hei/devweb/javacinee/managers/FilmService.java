@@ -14,7 +14,7 @@ public class FilmService {
 	
 	private static class FilmServiceHolder {
 		private final static FilmService instance = new FilmService();
-	}
+
 	
 	public static FilmService getInstance() {
 		return FilmServiceHolder.instance;

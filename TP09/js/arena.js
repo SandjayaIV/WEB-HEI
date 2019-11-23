@@ -37,14 +37,14 @@ let initFight = function(){
     } else {
         console.error("erreur, life input is negative");
     }
-}
-
+};
 
 window.onload = function () { // Faire en sorte que le html soit complétement chargé
     //Code for events will be here !
     let beginFightButton = document.getElementById("beginFight");
     beginFightButton.onclick = function(){
         initCharacter("Richar Aladana","Boxer");
+        initFight();
     }
 
 
