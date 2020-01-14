@@ -1,0 +1,78 @@
+{
+  "titre": "Moi, ce que j'aime, c'est les monstres",
+  "auteur": {
+    "prenom": "Emil",
+    "nom": "Ferris",
+    "nationalite": "US",
+    "anneeNaissance": 1962
+  },
+  "resume": "_Karen Reyes_ est une jeune fille de dix ans passionée de monstres qui habite à Chicago à la fin des années 1960. Suite à la mort de sa voisine _Anka Silverberg_, Karen va décider de mener l'enquête et découvrir un passé compliqué au coeur de l'Allemagne Nazi.",
+  "personnages": [
+    {
+      "prenom": "Karen",
+      "nom": "Reyes",
+      "protagoniste": true
+    },
+    {
+      "prenom": "Diego",
+      "nom": "Reyes",
+      "surnom": "Deeze",
+      "lien": "Frère"
+    },
+    {
+      "prenom": "Marvela",
+      "nom": "Reyes",
+      "lien": "Mère"
+    },
+    {
+      "prenom": "Anka",
+      "nom": "Silverberg",
+      "lien": "Voisine"
+    },
+    {
+      "prenom": "Sandy",
+      "lien": "Camarade de classe"
+    },
+    {
+      "nom": "Gronan",
+      "lien": "Voisin"
+    },
+    {
+      "prenom": "Seamus",
+      "nom": "Chuggez",
+      "surnom": "M. Chugg",
+      "lien": "Voisin"
+    }
+  ],
+  "editions": [
+    {
+      "originale": true,
+      "pays": "US",
+      "isbn": "978-1606999592",
+      "titre": "My favorite thing is monsters",
+      "editeur": "Fantagraphics Books",
+      "datePublication": "2017-02-28",
+      "nombrePages": 386
+    },
+    {
+      "pays": "FR",
+      "isbn": "979-1090724471",
+      "titre": "Moi, ce que j'aime, c'est les monstres",
+      "editeur": "Monsieur Toussaint Louverture",
+      "datePublication": "2018-08-23",
+      "nombrePages": 416
+    }
+  ],
+  "recompenses": [
+    {
+      "prix": "Prix Eisner",
+      "categorie": "Meilleur album",
+      "annee": 2018
+    },
+    {
+      "prix": "Festival d'Angoulême",
+      "categorie": "Fauve d'or",
+      "annee": 2019
+    }
+  ]
+}

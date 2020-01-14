@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bande-dessinée>
+    <titre>Moi, ce que j'aime, c'est les monstres</titre>
+    <auteur>
+        <prenom>Emil</prenom>
+        <nom>Ferris</nom>
+        <nationalite>US</nationalite>
+        <année-naissance>1962</année-naissance>
+    </auteur>
+    <!-- Pour le résumé, on choisit d'utiliser une représentation en HTML. Pour cela, on peut utiliser le namespace du XHTML. -->
+    <résumé xmlns:html="http://www.w3.org/1999/xhtml">
+        <html:p>
+            <html:em>Karen Reyes</html:em> est une jeune fille de dix ans passionée de monstres qui habite à Chicago à la fin des années 1960.
+            Suite à la mort de sa voisine <html:em>Anka Silverberg</html:em>, Karen va décider de mener l'enquête et découvrir un passé compliqué au coeur de l'Allemagne Nazi.
+        </html:p>
+    </résumé>
+    <personnages>
+        <personnage protagoniste="true">
+            <prenom>Karen</prenom>
+            <nom>Reyes</nom>
+        </personnage>
+        <personnage>
+            <prenom>Diego</prenom>
+            <nom>Reyes</nom>
+            <surnom>Deeze</surnom>
+            <lien>Frère</lien>
+        </personnage>
+        <personnage>
+            <prenom>Marvela</prenom>
+            <nom>Reyes</nom>
+            <lien>Mère</lien>
+        </personnage>
+        <personnage>
+            <prenom>Anka</prenom>
+            <nom>Silverberg</nom>
+            <lien>Voisine</lien>
+        </personnage>
+        <personnage>
+            <prenom>Sandy</prenom>
+            <lien>Camarade de classe</lien>
+        </personnage>
+        <personnage>
+            <nom>Gronan</nom>
+            <lien>Voisin</lien>
+        </personnage>
+        <personnage>
+            <prenom>Seamus</prenom>
+            <nom>Chuggez</nom>
+            <surnom>M. Chugg</surnom>
+            <lien>Voisin</lien>
+        </personnage>
+    </personnages>
+    <éditions>
+        <édition originale="true" pays="US">
+            <isbn>978-1606999592</isbn>
+            <titre>My favorite thing is monsters</titre>
+            <éditeur>Fantagraphics Books</éditeur>
+            <date-publication>2017-02-28</date-publication>
+            <nombre-pages>386</nombre-pages>
+        </édition>
+        <édition pays="FR">
+            <isbn>979-1090724471</isbn>
+            <titre>Moi, ce que j'aime, c'est les monstres</titre>
+            <éditeur>Monsieur Toussaint Louverture</éditeur>
+            <date-publication>2018-08-23</date-publication>
+            <nombre-pages>416</nombre-pages>
+        </édition>
+    </éditions>
+    <récompense prix="Prix Eisner" catégorie="Meilleur album" année="2018" />
+    <récompense prix="Festival d'Angoulême" catégorie="Fauve d'or" année="2019" />
+</bande-dessinée>
